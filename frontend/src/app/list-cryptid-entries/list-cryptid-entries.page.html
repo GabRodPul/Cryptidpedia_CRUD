@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cryptid Entries</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let ce of cryptidEntries" (click)="showCryptidEntry(ce)">
+      <!-- DECOMMENT: -->
+      <ion-avatar slot="start">
+        <img *ngIf="ce.filename" src="http://localhost:8080/images/{{ce.filename}}" alt="image"/>
+      </ion-avatar>
+      <ion-label>
+        <h1>{{ce.title}}</h1>
+        <h2>Category: {{ce.category}}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- DECOMMENT: -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addCryptidEntry()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

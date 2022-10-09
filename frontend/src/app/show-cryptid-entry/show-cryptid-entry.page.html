@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{entry.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="editCryptidEntry()">
+    <ion-icon name="create-outline"></ion-icon> Edit
+  </ion-button>
+  <ion-button expand="block" (click)="removeCryptidEntry()">
+    <ion-icon name="trash-outline"></ion-icon> Remove
+  </ion-button>
+  <ion-item>
+    <img class="entry-img" *ngIf="entry.filename" src="http://localhost:8080/images/{{entry.filename}}" alt="image"/>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      <h1 class="ion-text-wrap">{{entry.title}}</h1>
+      <h2>Category: {{entry.category}}</h2>
+      <p>First created at: {{entry.createdAt}}</p>
+      <p>Last updated at: {{entry.updatedAt}}</p>
+      <h1 style="margin-top: 5%;">Description</h1>
+      <p style="white-space: pre-wrap; text-align: justify;">{{entry.description}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
