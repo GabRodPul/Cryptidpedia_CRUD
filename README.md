@@ -18,7 +18,7 @@ All Cryptid Entries are composed of:
 
 # BackEnd
  - Full CRUD functionality.
- - Postman documentation: https://documenter.getpostman.com/view/23623831/2s83ziN4BB
+ - Postman documentation: https://documenter.getpostman.com/view/23623831/2s83ziN4BB (I've provided the images I used for the Postman testing in my project, check 'postman-images').
  - Didn't have time to add anything else but my idea was to add a new table for users to contribute to sightings and more info about the Entries, composed by its ID, a cryptidEntryId, description, image, username and date.
 
 # FrontEnd
