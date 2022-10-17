@@ -30,12 +30,12 @@ export class AddCryptidEntryPage implements OnInit {
     this.entry = this.router.getCurrentNavigation().extras.state.cryptidEntry;
 
     if (!this.entry) {
+      this.formMode = 'CREATE'
       this.entry = {
         title: '',
         category: this.categories[0],
         description: ''
       }
-      this.formMode = 'CREATE'
     } else {
       this.formMode = 'EDIT';
     }

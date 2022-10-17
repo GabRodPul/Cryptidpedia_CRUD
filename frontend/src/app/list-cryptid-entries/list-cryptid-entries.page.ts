@@ -35,7 +35,7 @@ export class ListCryptidEntriesPage implements OnInit {
     this.router.navigate(['show-cryptid-entry'], entryNav);
   }
 
-  addCryptidEntry() {
-    this.router.navigateByUrl("/add-cryptid-entry");
+  gotoAddCryptidEntry() {
+    this.router.navigate(["/add-cryptid-entry"], { state: { undefined } });
   }
 }

@@ -47,6 +47,7 @@
         <ion-select-option *ngFor="let c of categories">{{c}}</ion-select-option>
       </ion-select>
     </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControls.category.errors?.required">A category is required.</span>
 
     <ion-item lines="full">
       <ion-label position="floating">Description</ion-label>
